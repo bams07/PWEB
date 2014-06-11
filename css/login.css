@@ -1,0 +1,107 @@
+.background-login {
+
+  background: #303641;
+}
+
+.form{
+
+position: relative;
+width: 320px;
+margin: 0 auto;
+padding: 220px 0;
+-moz-transition: all 550ms ease-in-out;
+-o-transition: all 550ms ease-in-out;
+-webkit-transition: all 550ms ease-in-out;
+transition: all 550ms ease-in-out;
+
+}
+
+.form-control{
+
+
+}
+
+.form-control-text {
+ display: block;
+width: 279px;
+height: 31px;
+padding: 6px 12px;
+font-size: 12px;
+line-height: 1.42857143;
+color: #F1F0F0;
+background-color: #373e4a;
+background-image: none;
+border: 1px solid #454a54;
+border-radius: 3px;
+margin-bottom: 21px;
+  -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+  -moz-transition: border-color ease-in-out .15s, -moz-box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+.form-control-text:focus {
+  border-color: #c8cdd7;
+  outline: 0;
+  -moz-box-shadow:  0 2px 1px rgba(203, 208, 217, 0.08);
+  -webkit-box-shadow:  0 2px 1px rgba(203, 208, 217, 0.08);
+  box-shadow:  0 2px 1px rgba(203, 208, 217, 0.08);
+}
+
+.form-control-text::-webkit-input-placeholder {
+  color: #aaaaaa;
+}
+
+.btn-iniciar{
+
+border: 1px solid #454a54;
+text-align: left;
+padding: 17px 96px;
+font-size: 14px;
+color: #fff;
+margin-top: 22px;
+background: transparent;  
+
+
+}
+
+.img-logo{
+
+padding-left: 43%;
+margin-top: 81px;
+position: absolute;
+
+}
+
+.entypo-user{
+
+color: #CFCBCB;
+
+}
+
+.entypo-login{
+
+color: #CFCBCB;
+
+}
+
+.entypo-key{
+
+color: #CFCBCB;
+
+}
+
+.form-control-label-user{
+
+margin-bottom: 11px;
+
+
+}
+
+.form-control-label-pass{
+
+margin-bottom: 11px;
+
+
+}
