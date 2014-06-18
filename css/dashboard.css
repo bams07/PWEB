@@ -1,0 +1,49 @@
+.menu-items
+{
+
+list-style-type: none;
+font-family: "Helvetica Neue", Helvetica, "Noto Sans", sans-serif, Arial, sans-serif;
+font-size: 15px;
+color: #fff;
+padding-top: 10%;
+
+}
+
+.menu
+{
+
+height: 600px;
+width: 300px;
+background: #303641;
+
+}
+
+li{
+
+width: 36px;
+height: 30px;
+border-radius: 1px 1px 1px 1px;
+width: 297px;
+margin-left: -37px;
+border-bottom: 1px solid #454a54;
+border-top: 1px solid #454a54;
+padding-top: 12px;
+
+}
+
+.logo
+{
+
+padding-left: 17%;
+padding-top: 12%;
+
+
+}
+
+a{
+
+color: #aaabae;
+text-decoration: none;
+padding-left: 20%;
+
+}
