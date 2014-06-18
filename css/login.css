@@ -71,6 +71,7 @@ background: transparent;
 padding-left: 43%;
 margin-top: 81px;
 position: absolute;
+-webkit-transition: -webkit-transform 1s,opacity 1s,background 1s,width 1s,height 1s,font-size 1s;
 
 }
 
