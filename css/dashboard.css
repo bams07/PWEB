@@ -1,3 +1,11 @@
+body
+{
+
+background: url('../Imagenes/fondo.jpg') no-repeat top center fixed;
+
+}
+
+
 .menu-items
 {
 
@@ -12,9 +20,31 @@ padding-top: 10%;
 .menu
 {
 
-height: 600px;
+height: 100%;
 width: 300px;
 background: #303641;
+position: absolute;
+margin-top: -8px;
+margin-left: -8px;
+min-height: 600px;
+background: url('../Imagenes/fondo.jpg') no-repeat top center fixed;
+
+
+
+}
+
+.menu-logout
+{
+
+position: absolute;
+background: #303641;
+margin-left: 292px;
+margin-top: -2%;
+width: 78%;
+height: 14%;
+min-height: 100px;
+background: url('../Imagenes/fondo.jpg') no-repeat top center fixed;
+
 
 }
 
@@ -25,7 +55,7 @@ height: 30px;
 border-radius: 1px 1px 1px 1px;
 width: 297px;
 margin-left: -37px;
-border-bottom: 1px solid #454a54;
+/**border-bottom: 1px solid #454a54;**/
 border-top: 1px solid #454a54;
 padding-top: 12px;
 
@@ -42,8 +72,29 @@ padding-top: 12%;
 
 a{
 
-color: #aaabae;
+color: #fff;
 text-decoration: none;
 padding-left: 20%;
+
+}
+
+.logout-user
+{
+
+padding-top: 4%;
+position: absolute;
+padding-left: 67%;
+font-family: "Helvetica Neue", Helvetica, "Noto Sans", sans-serif, Arial, sans-serif;
+font-size: 15px;
+color: #fff;
+
+
+}
+
+.logout
+{
+color: #fff;
+text-decoration: none;
+padding-left: 0%;
 
 }
