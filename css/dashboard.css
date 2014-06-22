@@ -5,6 +5,13 @@ background: url('../Imagenes/fondo.jpg') no-repeat top center fixed;
 
 }
 
+#dashboard
+{
+
+background: rgba(0, 0, 0, 0.14);
+-webkit-border-radius: 1px 100px 1px 1px;
+	
+}
 
 .menu-items
 {
@@ -48,7 +55,7 @@ background: url('../Imagenes/fondo.jpg') no-repeat top center fixed;
 
 }
 
-li{
+.menu-items li{
 
 width: 36px;
 height: 30px;
@@ -98,3 +105,57 @@ text-decoration: none;
 padding-left: 0%;
 
 }
+
+.panel-dashboard
+{
+
+position: absolute;
+width: 80%;
+height: 85%;
+background: rgba(255, 255, 255, 0.36);
+margin-left: 300px;
+margin-top: 95px;
+-webkit-border-radius: 100px 1px 1px 1px;
+
+}
+
+.subpanel-dahsboard
+{
+
+width: 50%;
+margin-top: 8%;
+margin-left: 5%;
+
+}
+
+.subpanel-dahsboard h2
+{
+
+font-family: "Helvetica Neue", Helvetica, "Noto Sans", sans-serif, Arial, sans-serif;
+font-size: 22px;
+
+}
+
+.subpanel-dahsboard hr
+{
+
+border-bottom: 1px solid #000;
+}
+
+
+.subpanel-items
+{
+
+list-style: none;
+font-size: 17px;
+font-family: "Helvetica Neue", Helvetica, "Noto Sans", sans-serif, Arial, sans-serif;
+
+}
+
+.subpanel-items li
+{
+
+margin-bottom: 11px;
+
+}
+
