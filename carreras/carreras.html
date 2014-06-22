@@ -4,11 +4,11 @@
 
 	<meta charset="UTF-8">
 
-	<title>Dashboard - Universidad Tecnica Nacional</title>
+	<title>Carreras - Universidad Tecnica Nacional</title>
 
 
-     <link rel="stylesheet" href="css/dashboard.css">
-     <link rel="stylesheet" href="fonts/css/entypo.css">
+     <link rel="stylesheet" href="../css/carreras.css">
+     <link rel="stylesheet" href="../fonts/css/entypo.css">
      <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic">
 
 </head>
@@ -19,7 +19,7 @@
 <div class="logout-user">
 	
 <i class="entypo-logout"></i>
-<span>Bienvenido Usuario - <a class="logout" href="login.html">Cerrar sección</a></span> 
+<span>Bienvenido Usuario - <a class="logout" href="../login.html">Cerrar sección</a></span> 
 
 
 </div>
@@ -29,12 +29,12 @@
 
 <div class="menu">
 
-        <img class="logo"  src="Imagenes/logo.png" width="190px" height="100px">
+        <img class="logo"  src="../Imagenes/logo.png" width="190px" height="100px">
 
 <ul class="menu-items">
         
 <li id="dashboard">
-<a href="dashboard.html">
+<a href="../dashboard.html">
 <i class="entypo-gauge"></i>
 
 <span>Dashboard</span> 
@@ -43,7 +43,7 @@
 
 </li>
 <li id="carreras">
-<a href="carreras/carreras.html">
+<a href="carreras.html">
  <i class="entypo-flag"></i>
 
 <span>Carreras</span>
@@ -89,15 +89,47 @@
 	<p><h2>Ultimas busquedas realizadas</h2>
 		<hr>
 
-		<ul class="subpanel-items">
-			<li>2014/06/01 - Angula JS</li>
-			<li>2014/06/01 - Database, P</li>
-			<li>2014/06/01 - PHP, Code I</li>
-			<li>2014/06/01 - Ruby on Rail</li>
+		<table class="subpanel-table" cellspacing="0" width="100%"  >
+			
+			<tr>
+				
+			<th>Codigo</th>
+			<th>Nombre</th>
+			<th>      </th>
+
+			</tr>
+
+			<tr>
+				
+				<td>ISW-512</td>
+				<td>Programacion web</td>
+				<td>
+
+				<a class="btn-editar" href="">
+
+					<i class="entypo-pencil"></i>
+
+					<span>Editar</span> 
+
+
+				</a>
+				<a class="btn-eliminar" href="">
+
+					<i class="entypo-gauge"></i>
+
+					<span>Eliminar</span> 
+
+				</a>
+
+				</td>
+
+
+			</tr>
+		
 
 
 
-		</ul>
+		</table>
 
 
 	</p>
