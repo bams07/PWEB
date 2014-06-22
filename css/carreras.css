@@ -119,10 +119,11 @@ padding-left: 0%;
 position: absolute;
 width: 80%;
 height: 85%;
-background: rgba(255, 255, 255, 0.36);
+background: rgba(85, 85, 85, 0.11);
 margin-left: 300px;
 margin-top: 95px;
 -webkit-border-radius: 100px 1px 1px 1px;
+-webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
 
 }
 
@@ -171,9 +172,10 @@ margin-bottom: 11px;
 .subpanel-table th
 {
 
-border: 1px solid;
-background: #4C6B8D;
+border: 1px solid #000;
+background: #2B527E;
 font-family: "Helvetica Neue", Helvetica, "Noto Sans", sans-serif, Arial, sans-serif;
+color: #fff;
 
 
 }
@@ -198,17 +200,23 @@ font-family: "Helvetica Neue", Helvetica, "Noto Sans", sans-serif, Arial, sans-s
 
 .btn-editar
 {
-
+	
+background: #419C69;
 border: 1px solid #000;
-padding: 5px 5px 6px 10px;
-margin-left: 22px;
+padding: 5px 27px 6px 25px;
+margin-left: 6px;
 margin-right: 24px;
+
 
 }
 
 .btn-eliminar
 {
 
+background: #C75757;
+border: 1px solid #000;
+padding: 5px 27px 6px 25px;
+margin-left: -19px;
+margin-right: -94px;
 
-	
 }
