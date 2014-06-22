@@ -225,13 +225,13 @@ margin-right: -94px;
 form
 {
 
-width: 900px;
-height: 300px;
+width: 1073px;
+height: 637px;
 color: #fff;
 font-size: 18px;
-margin-left: 18%;
-border: 1px solid rgba(75, 75, 75, 0.3);
 -webkit-border-radius: 10px 10px 10px 10px;
+position: absolute;
+margin-top: -117px;
 }
 
 h3
@@ -240,7 +240,17 @@ h3
 font-family: "Helvetica Neue", Helvetica, "Noto Sans", sans-serif, Arial, sans-serif;
 color: #FFF;
 text-align: center;
-font-size: 42px;
+font-size: 25px;
+margin-bottom: 8px;
+margin-top: 10px;
+}
+
+h4
+{
+
+font-family: "Helvetica Neue", Helvetica, "Noto Sans", sans-serif, Arial, sans-serif;
+color: #FFF;
+font-size: 16px;
 
 }
 
@@ -251,8 +261,40 @@ font-family: "Helvetica Neue", Helvetica, "Noto Sans", sans-serif, Arial, sans-s
 height: 35px;
 -webkit-border-radius: 5px 5px 5px 5px;
 border: 1px solid #858383;
-width: 200px;
+width: 250px;
 font-size: 14px;
+margin-bottom: 11px;
+margin-right: 16px;
+
+}
+
+.cajas-select
+{
+
+font-family: "Helvetica Neue", Helvetica, "Noto Sans", sans-serif, Arial, sans-serif;
+height: 35px;
+-webkit-border-radius: 5px 5px 5px 5px;
+border: 1px solid #858383;
+width: 250px;
+font-size: 14px;
+margin-bottom: 11px;
+margin-left: -8px;
+margin-right: 16px;
+
+}
+
+
+.cajas-area
+{
+
+font-family: "Helvetica Neue", Helvetica, "Noto Sans", sans-serif, Arial, sans-serif;
+height: 35px;
+-webkit-border-radius: 5px 5px 5px 5px;
+border: 1px solid #858383;
+width: 250px;
+font-size: 14px;
+margin-bottom: -18px;
+margin-right: 16px;
 
 }
 
@@ -262,8 +304,8 @@ label
 
 font-family: "Helvetica Neue", Helvetica, "Noto Sans", sans-serif, Arial, sans-serif;
 font-size: 17px;
-padding-right: 10px;
-margin-left: 58px;
+width: 200px;
+display: inline-table;
 
 }
 
@@ -279,8 +321,8 @@ width: 100px;
 font-size: 14px;
 color: #fff;
 position: absolute;
-margin-top: -163px;
-margin-left: 726px;
+margin-top: 381px;
+margin-left: 725px;
 
 
 }
@@ -292,6 +334,7 @@ font-size: 20px;
 padding-top: 15px;
 color: transparent;
 text-align: center;
+padding-top: 27px;
 
 
 }
@@ -306,17 +349,33 @@ color: transparent;
 
 }
 
-textarea
+
+.img-estudiante
 {
 
+margin-left: 486px;
+padding-bottom: 8px;
+border: 2px solid rgba(255, 255, 255, 0.47);
+-webkit-border-radius: 100px;
+background: rgba(214, 214, 214, 0.28);
+margin-bottom: 14px
+}
+
+.subpanel-text
+{
+
+width: 1002px;
+padding-left: 50px;
+
+}
+
+
+
+.subpanel-text p
+{
 font-family: "Helvetica Neue", Helvetica, "Noto Sans", sans-serif, Arial, sans-serif;
-height: 35px;
--webkit-border-radius: 5px 5px 5px 5px;
-border: 1px solid #858383;
-width: 300px;
-height: 50px;
-font-size: 14px;
-
-
+font-size: 17px;
+padding-right: 66px;
+width: 200px;
 
 }
