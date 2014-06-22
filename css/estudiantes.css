@@ -13,7 +13,7 @@ color: #fff;
 
 }
 
-#carreras
+#estudiantes
 {
 
 background: rgba(0, 0, 0, 0.14);
@@ -130,7 +130,7 @@ margin-top: 95px;
 .subpanel-dahsboard
 {
 
-width: 50%;
+width: 62%;
 margin-top: 8%;
 margin-left: 5%;
 
@@ -225,14 +225,13 @@ margin-right: -94px;
 form
 {
 
-width: 500px;
+width: 900px;
 height: 300px;
 color: #fff;
 font-size: 18px;
-margin-left: 60%;
+margin-left: 18%;
 border: 1px solid rgba(75, 75, 75, 0.3);
 -webkit-border-radius: 10px 10px 10px 10px;
-
 }
 
 h3
@@ -304,5 +303,20 @@ text-align: center;
 font-family: "Helvetica Neue", Helvetica, "Noto Sans", sans-serif, Arial, sans-serif;
 font-size: 14px;
 color: transparent;
+
+}
+
+textarea
+{
+
+font-family: "Helvetica Neue", Helvetica, "Noto Sans", sans-serif, Arial, sans-serif;
+height: 35px;
+-webkit-border-radius: 5px 5px 5px 5px;
+border: 1px solid #858383;
+width: 300px;
+height: 50px;
+font-size: 14px;
+
+
 
 }

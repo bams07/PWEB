@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="UTF-8">
+
+	<title>Estudiantes - Universidad Tecnica Nacional</title>
+
+
+     <link rel="stylesheet" href="../css/estudiantes.css">
+     <link rel="stylesheet" href="../fonts/css/entypo.css">
+     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic">
+
+</head>
+<body>
+
+<script>
+function eliminarEstudiante() {
+  
+document.getElementById("msj").style.color = "#fff";
+document.getElementById("msj-redir").style.color = "#fff";
+
+var d = 3;
+
+//var tiempo = setInterval(function(){window.location="carreras.html"},3000);
+
+var tiempo = setInterval(function(){myTimer()},1000);		
+
+function myTimer() {
+   
+ 
+    d--;
+
+    	if(d==0)
+    	{
+
+    			window.location="estudiantes.html";
+
+    	}
+
+    document.getElementById("segundos").innerHTML = d;
+
+
+}
+
+
+}
+</script>
+
+<div class="menu-logout" >
+
+<div class="logout-user">
+	
+<i class="entypo-logout"></i>
+<span>Bienvenido Usuario - <a class="logout" href="../login.html">Cerrar sección</a></span> 
+
+
+</div>
+
+
+</div>
+
+<div class="menu">
+
+        <img class="logo"  src="../Imagenes/logo.png" width="190px" height="100px">
+
+<ul class="menu-items">
+        
+<li id="dashboard">
+<a href="../dashboard.html">
+<i class="entypo-gauge"></i>
+
+<span>Dashboard</span> 
+</a>
+
+
+</li>
+<li id="carreras">
+<a href="../carreras/carreras.html">
+ <i class="entypo-flag"></i>
+
+<span>Carreras</span>
+</a>
+
+</li>
+
+
+<li id="estudiantes">
+
+<a href="../estudiantes/estudiantes.html">
+
+<i class="entypo-book-open"></i>
+
+<span>Estudiantes</span>
+
+
+</a>
+
+</li>
+<li id="usuarios" >
+
+<a href="../usuarios/usuarios.html">
+
+
+ <i class="entypo-user"></i>
+
+<span>Usuarios</span>
+</a>
+
+</li>
+
+
+</ul>
+
+
+</div>
+
+<div class="panel-dashboard">
+	
+<div class="subpanel-dahsboard">
+	
+	<p><h2>Editar estudiantes</h2>
+	
+
+		<form method="post" >
+
+		<h3>207140842</h3>
+
+		<img src="">
+
+		<label >Nombre:</label><input class="cajas-texto" type="text" name="lastname" value="Bryan Miranda Salazar">	
+		<label >Carrera:</label><input class="cajas-texto" type="text" name="lastname" value="ISW-512">	
+		<label >Calidad / Skills:<textarea > Respetuoso,amable,responsable</textarea>
+
+				                                      
+										
+
+		
+
+	    <h3 id="msj">
+	   <i class="entypo-check"></i>Estudiante editado con exito</h3>
+
+	   <p id="msj-redir">Sera redireccionado en <b id="segundos">3</b> segundos</p>
+
+		</form>
+
+
+	    <input class="btn-guardar" type="submit" value="Guardar" onclick="eliminarEstudiante()"  >
+
+	</p>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+</body>
+</html>
