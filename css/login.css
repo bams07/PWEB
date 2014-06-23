@@ -1,6 +1,6 @@
 .background-login {
 
-  background: #303641;
+  background: url('../Imagenes/fondo.jpg') no-repeat top center fixed;
 }
 
 .form{
@@ -29,7 +29,7 @@ padding: 6px 12px;
 font-size: 12px;
 line-height: 1.42857143;
 color: #F1F0F0;
-background-color: #373e4a;
+background-color: rgba(55, 62, 74, 0.05);
 background-image: none;
 border: 1px solid #454a54;
 border-radius: 3px;
