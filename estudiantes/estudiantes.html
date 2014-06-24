@@ -15,8 +15,9 @@
 <body>
 
 <script>
-function eliminarCarrera() {
-    alert("Estudiante eliminado");
+function eliminarEstudiante() {
+	document.getElementById("eliminar").style.visibility = "hidden";
+    alert("ESTUDIANTE ELIMINADO");
 }
 </script>
 
@@ -120,7 +121,7 @@ function eliminarCarrera() {
 
 					<span>Editar</span> 
 				</a>
-				<a class="btn-eliminar"onclick="eliminarCarrera()">
+				<a class="btn-eliminar"onclick="eliminarEstudiante()">
 
 					<i class="entypo-erase"></i>
 
@@ -146,7 +147,7 @@ function eliminarCarrera() {
 
 					<span>Editar</span> 
 				</a>
-				<a class="btn-eliminar" onclick="eliminarCarrera()">
+				<a class="btn-eliminar" onclick="eliminarEstudiante()">
 
 					<i class="entypo-erase"></i>
 
@@ -174,7 +175,7 @@ function eliminarCarrera() {
 
 					<span>Editar</span> 
 				</a>
-				<a class="btn-eliminar" onclick="eliminarCarrera()">
+				<a class="btn-eliminar" onclick="eliminarEstudiante()">
 
 					<i class="entypo-erase"></i>
 
@@ -187,7 +188,7 @@ function eliminarCarrera() {
 
 			</tr>
 		
-	<tr>
+	<tr id="eliminar">
 				
 				<td><a href="vista.html">Fabiana Miranda Salazar</a></td>
 				<td>207568842</td>
@@ -200,7 +201,7 @@ function eliminarCarrera() {
 
 					<span>Editar</span> 
 				</a>
-				<a class="btn-eliminar"onclick="eliminarCarrera()">
+				<a class="btn-eliminar"onclick="eliminarEstudiante()">
 
 					<i class="entypo-erase"></i>
 
