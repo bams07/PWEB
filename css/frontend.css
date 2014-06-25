@@ -1,0 +1,256 @@
+body
+{
+
+background: url('../Imagenes/fondo.png') repeat top center fixed;
+
+}
+
+.franja-top
+{
+
+	background: #2D538D;
+width: 100%;
+height: 124px;
+padding-left: 16px;
+margin-left: -8px;
+margin-top: -8px;
+}
+
+
+.curva-logo
+{
+
+width: 243px;
+height: 170px;
+background: #383838;
+-webkit-border-radius: 1px 1px 177px 2px;
+margin-left: -17px;
+}
+
+.logo
+{
+
+margin-top: 31px;
+margin-left: 8px;
+
+}
+
+
+.menu
+{
+
+position: absolute;
+margin-top: -139px;
+margin-left: 301px;
+
+
+}
+
+.inicio
+{
+
+margin-top: 17px;
+margin-left: -24px;
+margin-right: 111px;
+position: absolute;
+
+}
+
+.carreras
+{
+margin-left: 80px;
+margin-top: 17px;
+position: absolute;
+}
+
+.estudiantes
+{
+
+margin-left: 208px;
+margin-top: 19px;
+
+
+}
+
+a
+{
+
+text-decoration: none;	
+font-family: "Helvetica Neue", Helvetica, "Noto Sans", sans-serif, Arial, sans-serif;
+color: #fff;
+
+}
+
+
+a:hover
+{
+
+color: #FFC715;
+font-weight: bold;
+
+}
+
+h2
+{
+
+font-family: "Helvetica Neue", Helvetica, "Noto Sans", sans-serif, Arial, sans-serif;
+color: #000;t
+text-align: center;
+
+}
+
+h3
+{
+
+font-family: "Helvetica Neue", Helvetica, "Noto Sans", sans-serif, Arial, sans-serif;
+color: #000;
+text-align: center;
+font-size: 20px;
+
+}
+
+label
+
+{
+
+font-family: "Helvetica Neue", Helvetica, "Noto Sans", sans-serif, Arial, sans-serif;
+font-size: 17px;
+padding-right: 10px;
+margin-left: 7px;
+
+}
+
+p
+{
+
+font-family: "Helvetica Neue", Helvetica, "Noto Sans", sans-serif, Arial, sans-serif;
+color: #000;
+text-align: center;
+
+}
+
+li
+{
+
+font-family: "Helvetica Neue", Helvetica, "Noto Sans", sans-serif, Arial, sans-serif;
+color: #000;
+
+}
+
+pre
+{
+
+font-family: "Helvetica Neue", Helvetica, "Noto Sans", sans-serif, Arial, sans-serif;
+color: #000;
+
+}
+
+.informacion
+{
+width: 717px;
+height: 500px;
+background: rgba(0, 0, 0, 0.15);
+margin-left: 482px;
+margin-top: 73px;
+-webkit-border-radius: 50px 50px 50px 50px;
+
+}
+
+.texto
+{
+
+padding-top: 23px;
+text-align: center;
+width: 702px;
+padding-left: 9px;
+}
+
+.cajas-texto
+{
+
+font-family: "Helvetica Neue", Helvetica, "Noto Sans", sans-serif, Arial, sans-serif;
+height: 35px;
+-webkit-border-radius: 5px 5px 5px 5px;
+border: 1px solid #858383;
+width: 330px;
+font-size: 14px;
+
+}
+
+.btn-guardar
+{
+
+background: #419C69;
+font-family: "Helvetica Neue", Helvetica, "Noto Sans", sans-serif, Arial, sans-serif;
+height: 35px;
+-webkit-border-radius: 5px 5px 5px 5px;
+border: 1px solid #858383;
+width: 100px;
+font-size: 14px;
+color: #fff;
+margin-top: -240px;
+
+
+}
+
+
+.subpanel-table
+{
+
+ margin-top: 11px;
+}
+
+.subpanel-table a
+{
+
+color: #000;
+
+}
+
+.subpanel-table a:hover
+{
+
+color: #FFC715;
+font-weight: bold;
+
+}
+
+
+.subpanel-table th
+{
+
+border: 1px solid #000;
+background: #2B527E;
+font-family: "Helvetica Neue", Helvetica, "Noto Sans", sans-serif, Arial, sans-serif;
+color: #fff;
+width: 64px;
+
+
+}
+
+.subpanel-table tr
+{
+
+height: 40px;
+
+
+}
+
+.subpanel-table td
+{
+
+border: 1px solid;
+background: transparent;
+font-family: "Helvetica Neue", Helvetica, "Noto Sans", sans-serif, Arial, sans-serif;
+
+
+}
+
+.img-estudiante
+{
+
+margin-left: 210px;
+padding-bottom: 8px;
+-webkit-border-radius: 100px;
+background: rgba(192, 192, 192, 1);
+}

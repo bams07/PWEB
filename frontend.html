@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Universidad Tecnica Nacional</title>
+
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="fonts/css/entypo.css">
+		<link rel="stylesheet" href="css/frontend.css">
+		<link rel="stylesheet" href="css/reveal.css">	
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic">
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.min.js"></script>
+		<script type="text/javascript" src="js/jquery.reveal.js"></script>
+
+
+
+<script>
+
+
+
+function ResultadoBusquedaCarreras() {
+   
+    document.getElementById("TablaResultadosCarreras").style.visibility = "visible";
+}
+
+function DesaparecerTablaCarreras() {
+   
+    document.getElementById("TablaResultadosCarreras").style.visibility = "hidden";
+}
+
+
+function ResultadoBusquedaEstudiantes() {
+   
+    document.getElementById("TablaResultadosEstudiantes").style.visibility = "visible";
+}
+
+function DesaparecerTablaEstudiantes() {
+   
+    document.getElementById("TablaResultadosEstudiantes").style.visibility = "hidden";
+}
+
+
+
+</script>
+
+</head>
+<body>
+
+		<div class="franja-top">
+
+
+			<div class="curva-logo">
+				
+				<img class="logo" src="Imagenes/logo.png" width="180px" height="80px">
+
+			</div>
+
+
+			<div class="menu">
+				
+					
+					<div class="inicio" >
+						
+					<a href="" >
+						
+						<i class="entypo-gauge"></i>
+
+						<span>Inicio</span> 
+
+
+					</a>
+
+					</div>
+
+					<div class="carreras">
+						
+					<a href="" dismissmodalclass="cerrar"  data-closeonbackgroundclick="false" data-reveal-id="carreras">
+ 						
+ 						<i class="entypo-flag"></i>
+
+						<span>Carreras</span>
+					</a>
+
+					</div>
+
+					<div class="estudiantes">
+						
+					
+					<a href="" data-closeonbackgroundclick="false" data-reveal-id="estudiantes">
+
+					<i class="entypo-book-open"></i>
+
+					<span>Estudiantes</span>
+
+
+					</a>
+
+
+					</div>
+	
+			</div>
+
+		</div>
+
+		<div class="informacion">
+
+
+		<div class="texto">
+			
+
+			<h2>Visión</h2>
+
+			<p>Ser una universidad de vanguardia en la formación integral de profesionales, la investigación y la acción social en las áreas científicas, técnicas y tecnológicas, con un enfoque de humanismo científico innovador, que contribuya al desarrollo sostenible de la sociedad costarricense.</p> 
+
+				<h2>Misión</h2>
+
+			<p>Brindar una educación integral de excelencia, en el marco de la moderna sociedad del conocimiento, centrando su acción académica en el área científica, técnica y tecnológica, en la investigación de alta calidad, y en la innovación como elementos fundamentales para el desarrollo humano con responsabilidad ambiental, en articulación con los sectores productivos de la sociedad.</p>
+
+		</div>
+
+		</div>
+
+
+		<div id="carreras" class="reveal-modal">
+
+
+		<h3>Busqueda carreras</h3>
+
+		<label >Buscar:</label><input class="cajas-texto" type="text"  >	
+
+		 <input style="margin-top: -297px;" class="btn-guardar" type="submit" value="Guardar" onclick="ResultadoBusquedaCarreras()"	  >
+
+
+
+	<table style="visibility:hidden;" class="subpanel-table" cellspacing="0" width="100%" id="TablaResultadosCarreras"  >
+			
+			<tr>
+				
+			<th>Codigo</th>
+			<th>Nombre</th>
+			
+
+			</tr>
+
+			<tr>
+				
+				<td><a href="" onclick="DesaparecerTablaCarreras()" class="cerrar" data-reveal-id="datos-carrera">ISW-512</a></td>
+				<td>Programacion web</td>
+	
+			</tr>
+
+	<tr>
+				
+				<td><a href="" class="cerrar" onclick="DesaparecerTablaCarreras()" data-reveal-id="datos-carrera">ISW-212</a></td>
+				<td>Programacion III</td>
+
+
+
+			</tr>
+
+
+
+	<tr>
+				
+				<td><a href="" class="cerrar" onclick="DesaparecerTablaCarreras()" data-reveal-id="datos-carrera">ISW-700</a></td>
+				<td>Ingles conversacional I</td>
+
+
+			</tr>
+		
+			<tr id="eliminar">
+				
+				<td><a href="" class="cerrar" onclick="DesaparecerTablaCarreras()" data-reveal-id="datos-carrera">ISW-790</a></td>
+				<td>Ingles conversacional II</td>
+
+
+
+			</tr>
+
+
+		</table>
+
+
+
+			<a class="cerrar" href="#" style="position: absolute;
+									font-size: 22px;
+									font-weight: bold;
+									color: #616161;
+									top: 5px;
+									right: 19px;" 
+				onclick="DesaparecerTablaCarreras()">&#215;</a>
+
+
+
+
+
+		</div>
+
+
+		<div id="estudiantes" class="reveal-modal">
+
+
+
+		<h3>Busqueda estudiantes</h3>
+
+		<label >Buscar:</label><input class="cajas-texto" type="text"  >	
+
+		 <input style="margin-top: -297px;" class="btn-guardar" type="submit" value="Guardar" onclick="ResultadoBusquedaEstudiantes()"	  >
+
+
+
+		<table style="visibility: hidden;" class="subpanel-table" cellspacing="0" width="100%" id="TablaResultadosEstudiantes"  >
+			
+			<tr>
+				
+			<th>Nombre</th>
+			<th>Cedula</th>
+			<th>Carrera</th>
+			
+
+			</tr>
+
+			<tr>
+				
+				<td><a href="" class="cerrar" onclick="DesaparecerTablaEstudiantes()" data-reveal-id="datos-estudiante">Bryan Miranda Salazar</a></td>
+				<td>207140842</td>
+				<td>ISW-512</td>
+			
+
+			</tr>
+
+	<tr>
+				
+			    <td><a href="" class="cerrar" onclick="DesaparecerTablaEstudiantes()" data-reveal-id="datos-estudiante">Alexa Rodriguez</a></td>
+				<td>20789463</td>
+				<td>ISW-512</td>
+			
+
+
+			</tr>
+
+
+
+	<tr>
+				
+				<td><a href="" class="cerrar" onclick="DesaparecerTablaEstudiantes()" data-reveal-id="datos-estudiante">Pedro Perez Castro</a></td>
+				<td>70896143</td>
+				<td>ISW-211</td>
+			
+
+
+			</tr>
+		
+	<tr id="eliminar">
+				
+				<td><a href="" class="cerrar" onclick="DesaparecerTablaEstudiantes()" data-reveal-id="datos-estudiante">Fabiana Miranda S</a></td>
+				<td>207568842</td>
+				<td>ISW-790</td>
+		
+
+
+			</tr>
+
+
+		</table>
+
+
+
+			<a class="cerrar" href="#" style="position: absolute;
+									font-size: 22px;
+									font-weight: bold;
+									color: #616161;
+									top: 5px;
+									right: 19px;" 
+				onclick="DesaparecerTablaEstudiantes()">&#215;</a>
+
+		</div>
+
+
+
+		<div id="datos-carrera" class="reveal-modal">
+
+
+				<div>
+					
+					<h3>ISW-512</h3>
+
+					<p>Nombre: Programacion web</p>
+
+
+				</div>
+
+	
+			<a class="cerrar" href="#" style="position: absolute;
+									font-size: 22px;
+									font-weight: bold;
+									color: #616161;
+									top: 5px;
+									right: 19px;" 
+				onclick="DesaparecerTablaCarreras()">&#215;</a>
+
+		</div>
+
+
+
+			<div id="datos-estudiante" class="reveal-modal">
+
+
+				<div>
+
+				<h3>207140842</h3>
+
+
+			    <img class="img-estudiante" src="Imagenes/estudiante.png" width="110px" height="110px">
+
+					
+
+
+<ul>
+	
+<li> <b>Nombre:</b> Bryan Miranda Salazar</li>
+<li><b>Carrera: </b> Ingenieria del software</li>
+<li><b>Curso: </b> ISW-512 </li>
+<li><b>Calidad / Skills: </b> Respetuoso,amable,responsable</li>
+<li><b>Nivel de ingles: </b> Intermedio</li>
+<li><b>Tecnologías: </b> HTML,JAVASCRIPT,CSS</li>
+<li><b>Fecha: </b> 20/05/2014 </li>
+<li><b>Descripcion: </b> Diseño web</li>
+<li><b>Calificación: </b> 5</li>
+<li><b>Comentarios: </b> Buen estudiante</li>
+				
+
+</ul>
+
+
+
+				</p>
+	
+				</div>
+
+	
+			<a class="cerrar" href="#" style="position: absolute;
+									font-size: 22px;
+									font-weight: bold;
+									color: #616161;
+									top: 5px;
+									right: 19px;" 
+				onclick="DesaparecerTablaCarreras()">&#215;</a>
+
+		</div>
+
+
+
+
+</body>
+</html>
