@@ -168,6 +168,12 @@ margin-bottom: 11px;
 
 }
 
+.subpanel-table
+{
+
+ margin-top: 11px;
+}
+
 
 
 .subpanel-table th
@@ -222,6 +228,18 @@ margin-right: -22px;
 
 }
 
+.btn-agregar
+{
+
+
+background: #52504D;
+border: 1px solid #000;
+padding: 5px 27px 6px 25px;
+margin-left: -2px;
+margin-right: -87px;
+font-family: "Helvetica Neue", Helvetica, "Noto Sans", sans-serif, Arial, sans-serif;
+}
+
 form
 {
 
@@ -240,8 +258,7 @@ font-family: "Helvetica Neue", Helvetica, "Noto Sans", sans-serif, Arial, sans-s
 color: #FFF;
 text-align: center;
 font-size: 25px;
-margin-bottom: 45px;
-margin-top: 10px;
+margin-top: 35px;
 }
 
 h4
@@ -333,7 +350,7 @@ font-size: 20px;
 padding-top: 15px;
 color: transparent;
 text-align: center;
-padding-top: 27px;
+padding-top: 30px;
 
 
 }

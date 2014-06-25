@@ -176,6 +176,11 @@ margin-bottom: 11px;
 
 }
 
+.subpanel-table
+{
+
+ margin-top: 11px;
+}
 
 
 .subpanel-table th
@@ -215,6 +220,7 @@ border: 1px solid #000;
 padding: 5px 27px 6px 25px;
 margin-left: 6px;
 margin-right: 24px;
+font-family: "Helvetica Neue", Helvetica, "Noto Sans", sans-serif, Arial, sans-serif;
 
 
 }
@@ -227,18 +233,31 @@ border: 1px solid #000;
 padding: 5px 27px 6px 25px;
 margin-left: -19px;
 margin-right: -94px;
+font-family: "Helvetica Neue", Helvetica, "Noto Sans", sans-serif, Arial, sans-serif;
+
+}
+
+
+.btn-agregar
+{
+
+background: #52504D;
+border: 1px solid #000;
+padding: 5px 27px 6px 25px;
+margin-left: -2px;
+margin-right: -87px;
+font-family: "Helvetica Neue", Helvetica, "Noto Sans", sans-serif, Arial, sans-serif;
 
 }
 
 form
 {
 
-width: 500px;
+width: 700px;
 height: 300px;
 color: #fff;
 font-size: 18px;
-margin-left: 60%;
-border: 1px solid rgba(75, 75, 75, 0.3);
+margin-left: 30%;
 -webkit-border-radius: 10px 10px 10px 10px;
 
 }
@@ -249,7 +268,7 @@ h3
 font-family: "Helvetica Neue", Helvetica, "Noto Sans", sans-serif, Arial, sans-serif;
 color: #FFF;
 text-align: center;
-font-size: 42px;
+font-size: 25px;
 
 }
 
@@ -272,7 +291,7 @@ label
 font-family: "Helvetica Neue", Helvetica, "Noto Sans", sans-serif, Arial, sans-serif;
 font-size: 17px;
 padding-right: 10px;
-margin-left: 58px;
+margin-left: 7px;
 
 }
 
@@ -288,8 +307,8 @@ width: 100px;
 font-size: 14px;
 color: #fff;
 position: absolute;
-margin-top: -163px;
-margin-left: 726px;
+margin-top: -240px;
+margin-left: 763px;
 
 
 }

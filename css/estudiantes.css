@@ -168,6 +168,11 @@ margin-bottom: 11px;
 
 }
 
+.subpanel-table
+{
+
+ margin-top: 11px;
+}
 
 
 .subpanel-table th
@@ -220,6 +225,18 @@ padding: 5px 27px 6px 25px;
 margin-left: -19px;
 margin-right: -94px;
 
+}
+
+.btn-agregar
+{
+
+
+background: #52504D;
+border: 1px solid #000;
+padding: 5px 27px 6px 25px;
+margin-left: -2px;
+margin-right: -87px;
+font-family: "Helvetica Neue", Helvetica, "Noto Sans", sans-serif, Arial, sans-serif;
 }
 
 form
