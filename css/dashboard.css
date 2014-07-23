@@ -77,11 +77,27 @@ padding-top: 12%;
 
 }
 
+.status
+{
+
+font-size: 40px;
+
+
+}
+
 a{
 
 color: #fff;
 text-decoration: none;
 padding-left: 20%;
+
+}
+
+
+h2
+{
+
+color: #fff;
 
 }
 

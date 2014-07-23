@@ -150,7 +150,7 @@ color: #000;
 width: 717px;
 height: 500px;
 background: rgba(0, 0, 0, 0.15);
-margin-left: 482px;
+margin-left: 452px;
 margin-top: 73px;
 -webkit-border-radius: 50px 50px 50px 50px;
 
@@ -172,8 +172,23 @@ font-family: "Helvetica Neue", Helvetica, "Noto Sans", sans-serif, Arial, sans-s
 height: 35px;
 -webkit-border-radius: 5px 5px 5px 5px;
 border: 1px solid #858383;
-width: 330px;
+width: 230px;
 font-size: 14px;
+
+}
+
+.cajas-select
+{
+
+font-family: "Helvetica Neue", Helvetica, "Noto Sans", sans-serif, Arial, sans-serif;
+height: 35px;
+-webkit-border-radius: 5px 5px 5px 5px;
+border: 1px solid #858383;
+width: 114px;
+font-size: 14px;
+margin-bottom: 11px;
+margin-left: -8px;
+margin-right: 16px;
 
 }
 

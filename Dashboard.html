@@ -6,34 +6,39 @@
 
 	<title>Dashboard - Universidad Tecnica Nacional</title>
 
-
+     <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-theme.css">
+     <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">'
      <link rel="stylesheet" href="css/dashboard.css">
      <link rel="stylesheet" href="fonts/css/entypo.css">
      <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic">
 
+      <script src="js/jquery.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+    
+
+
 </head>
 <body>
 
-<div class="menu-logout" >
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
 
-<div class="logout-user">
-	
-<i class="entypo-logout"></i>
-<span>Bienvenido Usuario - <a class="logout" href="login.html">Cerrar sección</a></span> 
+          <a class="navbar-brand" style="color:#fff;" href="#">Univesidad Tecnica Nacioal</a>
 
+       
 
-</div>
-
-
-</div>
-
-<div class="menu">
-
-        <img class="logo"  src="Imagenes/logo.png" width="190px" height="100px">
-
-<ul class="menu-items">
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
         
-<li id="dashboard">
+<li class="active" >
 <a href="dashboard.html">
 <i class="entypo-gauge"></i>
 
@@ -76,41 +81,95 @@
 
 </li>
 
+<li id="usuarios" >
+
+<a href="login.html">
+
+
+ <i class="entypo-logout"></i>
+
+<span>Cerrar sesión</span>
+</a>
+
+</li>
+
+
 
 </ul>
+        </div>
+      </div>
+    </div>
 
 
-</div>
 
-<div class="panel-dashboard">
+
+<div class="container" style="padding: 40px 15px;">
 	
-<div class="subpanel-dahsboard">
+
 	
-	<p><h2>Ultimas busquedas realizadas</h2>
-		<hr>
+	<p><h2>Panel general</h2>
 
-		<ul class="subpanel-items">
-			<li>2014/06/01 - Angula JS</li>
-			<li>2014/06/01 - Database, P</li>
-			<li>2014/06/01 - PHP, Code I</li>
-			<li>2014/06/01 - Ruby on Rail</li>
-
-
-
-		</ul>
 
 
 	</p>
 
+<div class="row">
+  <div class="col-xs-6 col-md-3">
+    
+
+
+ <div class="thumbnail">
+
+<div class="status">
+
+    <i class="entypo-flag"></i>  
+     <span style="font-size:25px;">1000</span>
+
+</div>
+    
+      </div>
+
+
+  </div>
+
+
+  <div class="col-xs-6 col-md-3">
+   
+
+ <div class="thumbnail">
+
+<div class="status">
+
+    <i class="entypo-book-open"></i>  
+     <span style="font-size:25px;">1000</span>
+
+</div>
+    
+      </div>
+
+
+  </div>
+  <div class="col-xs-6 col-md-3">
+    <div class="thumbnail">
+
+<div class="status">
+
+    <i class="entypo-user"></i>  
+     <span style="font-size:25px;">1000</span>
+
+</div>
+    
+      </div>
+  </div>
+
 
 </div>
 
+</div>
 
 </div>
 
-
-
-
+</div>
 
 </body>
 </html>
