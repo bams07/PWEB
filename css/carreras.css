@@ -28,6 +28,7 @@ color: #fff;
 
 }
 
+
 th
 {
 
@@ -35,6 +36,11 @@ th
 color: #fff;
 }
 
+.btn-group
+{
+
+	vertical-align: super;
+}
 
 
 .lbl-codigo
