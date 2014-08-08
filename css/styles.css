@@ -1,0 +1,83 @@
+body
+{
+
+background: rgba(43, 93, 138, 0.97);
+
+}
+
+a
+{
+
+color: #fff;
+
+}
+
+a:hover
+{
+
+color: #fff;
+
+}
+
+th
+{
+
+	font-size: 18px;
+color: #fff;
+}
+
+.btn-group
+{
+
+	vertical-align: super;
+}
+
+
+.lbl-codigo
+{
+
+font-size: 18px;
+
+}
+
+.lbl-nombre
+{
+
+font-size: 18px;
+color: #fff;
+	
+}
+
+.panel-warning
+{
+
+	padding-top: 77px;
+	border-color: transparent;
+	background-color: transparent;
+	font-weight: bold;
+font-size: 18px;
+
+
+}
+
+.btn-warning
+{
+
+font-size: 16px;
+font-weight: bold;
+
+}
+
+.btn-agregar
+{
+
+background: #52504D;
+border: 1px solid #000;
+padding: 5px 27px 6px 25px;
+margin-left: -2px;
+margin-right: -87px;
+font-family: "Helvetica Neue", Helvetica, "Noto Sans", sans-serif, Arial, sans-serif;
+
+}
+
+

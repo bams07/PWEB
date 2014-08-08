@@ -311,7 +311,7 @@ function vistaEstudiantes()
     document.getElementById("carrera").value = carrera_estudiante;
   	document.getElementById("nivel_ingles").value = nivel_ingles_estudiante;
   	document.getElementById("imagen").innerHTML = '<img src="'+imagen_estudiante+'">';
-  	document.getElementById("encabezado-pagina").innerHTML = nombre_estudiante;
+  	document.getElementById("encabezado-pagina").innerHTML = "Estudiante - "+nombre_estudiante;
 
 
 
