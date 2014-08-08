@@ -127,12 +127,8 @@ function editarCarrera()
 	var nombre_carrera;
 	var carreras = JSON.parse(localStorage.getItem('carreras'));
 
-    var link = window.location.href.slice(window.location.href.indexOf('?') + 1);
+    var codigo_carrera = window.location.href.slice(window.location.href.indexOf('=') + 1);
 
-    for(var i = 0; i < link.length; i++)
-    {
-        codigo_carrera = link[i].split('=');
-    }
 
 
     for (var i = 0; i < carreras.length; i++) {
@@ -189,3 +185,5 @@ function editarCarrera()
 
 
 }
+
+
