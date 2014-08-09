@@ -1,18 +1,17 @@
 
+
 function agregarEstudiantes()
 {
-
-	
-
 
 		$("#btn-agregar").click(function() 
 
 			{
+				//Variables
 				var cedula = document.getElementById('cedula').value;
 				var nombre = document.getElementById('nombre').value;
 				var carrera = document.getElementById('carrera').value;
 				var nivel_ingles = document.getElementById('nivel_ingles').value;
-				var imagen = document.getElementById('imagen').lastChild.attributes[0].value;
+				var imagen = document.getElementById('imagen').src;
 
 				var estudiante = {"cedula":cedula,"nombre":nombre, "carrera":carrera,"nivel_ingles":nivel_ingles,"imagen":imagen};
 
@@ -29,8 +28,10 @@ function agregarEstudiantes()
 
 				estudiantes.push(estudiante);
 
-
+				//Enviamos los valores al localstorage
 				localStorage.setItem('estudiantes',JSON.stringify(estudiantes));
+
+				// Imprimos el menssaje de resultado
 
 				document.getElementById("mensaje").innerHTML = '<div class="alert alert-success" role="alert"><button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>Estudiante agregado con exito!</div>';
 
@@ -45,11 +46,11 @@ function agregarEstudiantes()
 		function dropdown_Inputs()
 		{
 
-
+		// Evento que se activa cuando presionamos el TAG <a>
 			$("a").click(function() 
 		{
 		
-		debugger;
+
 
 		if(this.id == "carreras")
 		{
@@ -78,14 +79,71 @@ function agregarEstudiantes()
 
 
 
+	function CargarImagen()
+	{
+
+	// Evento que se activa cuando el elemento cambia
+	$('#cargar-imagen').change(function()
+{
+
+	// Variables
+	var cargar_imagen = document.getElementById('cargar-imagen');
+	var mostrar_imagen = document.getElementById('mostrar-imagen');
+
+			
+			//Toma los datos del input
+			var file = cargar_imagen.files[0];
+			// Tipo de datos que buscamos
+			var tipo_imagen = /image.*/;
+
+			//Compara si el archivo seleccionado es de tipo imagen
+			if (file.type.match(tipo_imagen)) {
+
+				// Variable que es una funcion de leer archivos
+				var reader = new FileReader();
+
+				reader.onload = function(e) {
+
+
+					mostrar_imagen.innerHTML = null;
+
+					// Crea una variable de tipo tag IMG
+					var img = new Image();
+					img.src = reader.result;
+					img.id = "imagen";
+					img.width = 200;
+					img.height = 150;
+
+					//Agregar la variable TAG IMG al DOM
+					mostrar_imagen.appendChild(img);
+				}
+
+				// Convierte el archivo leido en un dato binario
+				reader.readAsDataURL(file);	
+
+			} else {
+
+				mostrar_imagen.innerHTML = "Archivo no soportado"
+			}
+
+});
+
+
+	}
+
+
 function  cargarEstudiantes()
 {
 
+		// Variable que es igual a los header de la tabla
 		var columnas = "<tr><th></th><th>Cedula</th><th>Nombre</th><th>Carrera</th><th>Nivel ingles</th><th>Opciones</th></tr>";
 
+		// Variable toma los valores del localstorage en formato JSON 
 		var estudiantes = JSON.parse(localStorage.getItem('estudiantes'));
 		var estudiante = columnas;
 
+
+		// Ciclo que recorre la variable en formato JSON
 		for (var i = 0 ; i < estudiantes.length; i++) {
 			
 
@@ -93,6 +151,7 @@ function  cargarEstudiantes()
 			if(estudiantes[i] != undefined)
 			{
 
+			// Imprime los valores en formato html con sus respectivas variables tomadas del JSON
 			estudiante += "<tr>";
 			estudiante += '<td class="lbl-imagen"><img src="'+estudiantes[i].imagen+'" height="100" width="100" ></a></td>';
 			estudiante += '<td class="lbl-cedula"><a href="vista.html?cedula='+estudiantes[i].cedula+'">'+estudiantes[i].cedula+'</a></td>';
@@ -116,6 +175,7 @@ function  cargarEstudiantes()
 
 		};
 
+		// Agrega los valores al DOM
 		document.getElementById("table-estudiantes").innerHTML = estudiante;
 
 
@@ -124,15 +184,18 @@ function  cargarEstudiantes()
 function cargarCarreras()
 {
 
-debugger;
+
+		// Variable toma los valores del localstorage en formato JSON 
 var carreras = JSON.parse(localStorage.getItem('carreras'));
 var carrera = "";
-
+		
+		// Ciclo que recorre las carreras
 		for (var i = 0 ; i < carreras.length; i++) {
 
 			if(carreras[i] != undefined)
 			{
 
+			// Imprime los valores en formato html con sus respectivas variables tomadas del JSON
 				carrera += '<li><a id="carreras" href="#">'+carreras[i].nombre+'</a></li>'
 
 			}
@@ -140,7 +203,7 @@ var carrera = "";
 			};
 
 
-
+// Agrega los valores al DOM
 			document.getElementById('menu_carreras').innerHTML = carrera;
 
 
@@ -151,15 +214,18 @@ var carrera = "";
 
 
 function  eliminarEstudiantes()
-{
-
+{	
+		// Evento que se activa cuando presionamo el TAG con el class .eliminar
 		$(".eliminar").click(function() 
 			{
 
+			// Tomamos el id del elemento clikqueado
 			var	cedula_estudiante =  $(this).attr("id");
 
+			// Variable toma los valores del localstorage en formato JSON 
 			var estudiantes = JSON.parse(localStorage.getItem('estudiantes'));
 
+			// Ciclo que recorre 
 			for (var i = 0; i < estudiantes.length; i++) {
 
 				if(estudiantes[i] != undefined)
@@ -175,10 +241,14 @@ function  eliminarEstudiantes()
 
 			};
 
+		// Enviamos los valores de nuevo a localstorage ya actualizados
 		 localStorage.setItem('estudiantes',JSON.stringify(estudiantes));
 
+		 	// Imprimos el menssaje de resultado
 			document.getElementById("mensaje").innerHTML = '<div class="alert alert-danger" role="alert"><button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>Estudiante eliminado con exito!</div>';
 		
+				//Metodos llamados para cargar y elminar respectivamente
+				
 				cargarEstudiantes();
 
 				eliminarEstudiantes();
@@ -192,17 +262,20 @@ function  eliminarEstudiantes()
 
 function editarEstudiantes()
 {
-
+	//Variables
 	var cedula_estudiante;
 	var nombre_estudiante;
 	var carrera_estudiante;
 	var nivel_ingles_estudiante;
 	var imagen_estudiante;
+
+	//Toma los valores del localstorage
 	var estudiantes = JSON.parse(localStorage.getItem('estudiantes'));
 
+	//Esta variable toma el valor de la cedula enviada por parametro desde el navegador
    cedula_estudiante = window.location.href.slice(window.location.href.indexOf('=') + 1);
 
-
+   //Ciclo que reccore y busca en base al valor enviado por parametro
     for (var i = 0; i < estudiantes.length; i++) {
 
     			if(estudiantes[i] != undefined)
@@ -211,7 +284,7 @@ function editarEstudiantes()
 
     		if(estudiantes[i].cedula == cedula_estudiante)
     		{
-
+			// Igualamos los variables a los valores del arreglo
     			nombre_estudiante = estudiantes[i].nombre;
     			carrera_estudiante = estudiantes[i].carrera;
     			nivel_ingles_estudiante = estudiantes[i].nivel_ingles;
@@ -224,7 +297,7 @@ function editarEstudiantes()
 
    	};
 
-
+   	// Toma los valores y los agrega a los campo en el DOM
   	document.getElementById("cedula").value = cedula_estudiante;
   	document.getElementById("nombre").value = nombre_estudiante;
     document.getElementById("carrera").value = carrera_estudiante;
@@ -232,10 +305,11 @@ function editarEstudiantes()
   	document.getElementById("imagen").innerHTML = '<img src="'+imagen_estudiante+'">';
 
 
+  		// Este evento se activa cuando presionamos el TAG con el id 
 		$("#btn-editar").click(function() 
 
 			{
-
+			//Ciclo que reccore los valores tomados del localstorage
 			for (var i = 0; i < estudiantes.length; i++) {
 
     			if(estudiantes[i] != undefined)
@@ -244,7 +318,7 @@ function editarEstudiantes()
 
     		if(estudiantes[i].cedula == cedula_estudiante)
     		{
-
+    			// Editamos los valores con los domados de los campos del DOM
     			estudiantes[i].cedula = document.getElementById("cedula").value;
     			estudiantes[i].nombre = document.getElementById("nombre").value;
     			estudiantes[i].carrera = document.getElementById("carrera").value;
@@ -259,8 +333,10 @@ function editarEstudiantes()
 
    			};
 
+   			//Enviamos los datos al localstorage ya actualizados
    			localStorage.setItem('estudiantes',JSON.stringify(estudiantes));
 
+   			// Imprimos el menssaje de resultado
    			document.getElementById("mensaje").innerHTML = '<div class="alert alert-info" role="alert"><button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>Estudiante editado con exito!</div>';
 
  
@@ -273,7 +349,7 @@ function editarEstudiantes()
 function vistaEstudiantes()
 {
 
-
+	// Variables
 	var cedula_estudiante;
 	var nombre_estudiante;
 	var carrera_estudiante;
@@ -281,9 +357,10 @@ function vistaEstudiantes()
 	var imagen_estudiante;
 	var estudiantes = JSON.parse(localStorage.getItem('estudiantes'));
 
-   cedula_estudiante = window.location.href.slice(window.location.href.indexOf('=') + 1);
+	//Esta variable toma el valor de la cedula enviada por parametro desde el navegador
+   	cedula_estudiante = window.location.href.slice(window.location.href.indexOf('=') + 1);
 
-
+   	// Ciclo que recorre los valores
     for (var i = 0; i < estudiantes.length; i++) {
 
     			if(estudiantes[i] != undefined)
@@ -292,7 +369,7 @@ function vistaEstudiantes()
 
     		if(estudiantes[i].cedula == cedula_estudiante)
     		{
-
+    			// Igualamos los variables a los valores del arreglo
     			nombre_estudiante = estudiantes[i].nombre;
     			carrera_estudiante = estudiantes[i].carrera;
     			nivel_ingles_estudiante = estudiantes[i].nivel_ingles;
@@ -305,7 +382,7 @@ function vistaEstudiantes()
 
    	};
 
-
+   	// Agregamos los valores de las variables a los campos del DOM
   	document.getElementById("cedula").value = cedula_estudiante;
   	document.getElementById("nombre").value = nombre_estudiante;
     document.getElementById("carrera").value = carrera_estudiante;

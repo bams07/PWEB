@@ -21,7 +21,7 @@
       <script src="../js/jasny-bootstrap.min.js"></script>
 	 <script src="../js/bootstrap.min.js"></script>
 	  <script src="../js/estudiantes.js"></script>
-	  <script type="text/javascript" src="../js/bootstrap-filestyle.min.js"> </script>
+	
 
 </head>
 <body>
@@ -118,12 +118,14 @@
 
  </div>
 
-
    <div class="input-group">
- <div class="fileinput fileinput-new" data-provides="fileinput">
-  <div class="fileinput-preview thumbnail" id="imagen" data-trigger="fileinput" style="width: 200px; height: 150px;"></div>
+ <div class="fileinput fileinput-new" >
+  <div class="vista-imagen" id="mostrar-imagen" ></div>
   <div>
-    <span class="btn btn-default btn-file"><span class="fileinput-new">Imagen</span><span class="fileinput-exists">Cambiar</span><input type="file" name="...">
+  <span >
+  <span >
+  <input type="file" class="btn btn-primary" id="cargar-imagen">
+  </span>
   </div>
 </div>
   </div>
@@ -193,6 +195,7 @@
 agregarEstudiantes();
 cargarCarreras();
 dropdown_Inputs();
+CargarImagen();
 
 </script>
 
