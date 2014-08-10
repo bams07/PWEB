@@ -1,152 +1,151 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 
-	<meta charset="UTF-8">
+    <meta charset="UTF-8">
 
-	<title>Carreras - Universidad Tecnica Nacional</title>
+    <title>Carreras - Universidad Tecnica Nacional</title>
 
 
-	 <link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap-theme.css">
- 	 <link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.css">'
-     <link rel="stylesheet" href="../css/styles.css">
-     <link rel="stylesheet" href="../fonts/css/entypo.css">
-     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic">
+    <link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap-theme.css">
+    <link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.css">'
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../fonts/css/entypo.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic">
 
-     <script src="../js/jquery.min.js"></script>
-	 <script src="../js/bootstrap.min.js"></script>
-	 <script src="../js/carreras.js"></script>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/carreras.js"></script>
 
 
 </head>
+
 <body>
 
 
- <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
 
-        <a class="navbar-brand" style="color:#fff;" href="#">Univesidad Tecnica Nacioal</a>
-
-
-
-      </div>
-      <div class="navbar-collapse collapse">
-        <ul class="nav navbar-nav navbar-right">
-
-          <li>
-            <a href="../dashboard.html">
-              <i class="entypo-gauge"></i>
-
-              <span>Dashboard</span> 
-            </a>
-
-
-          </li>
-          <li class="active">
-            <a href="carreras.html">
-             <i class="entypo-flag"></i>
-
-             <span>Carreras</span>
-           </a>
-
-         </li>
-
-
-         <li id="estudiantes">
-
-          <a href="../estudiantes/estudiantes.html">
-
-            <i class="entypo-book-open"></i>
-
-            <span>Estudiantes</span>
-
-
-          </a>
-
-        </li>
-        <li id="usuarios" >
-
-          <a href="../usuarios/usuarios.html">
-
-
-           <i class="entypo-user"></i>
-
-           <span>Usuarios</span>
-         </a>
-
-       </li>
-
-       <li id="usuarios" >
-
-        <a href="../login.html">
-
-
-         <i class="entypo-logout"></i>
-
-         <span>Cerrar sesión</span>
-       </a>
-
-     </li>
+                <a class="navbar-brand" style="color:#fff;" href="#">Univesidad Tecnica Nacioal</a>
 
 
 
-   </ul>
- </div>
-</div>
-</div>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
 
-	<div class="panel panel-warning">
-  <div class="panel-heading">Agregar carreras</div>
-  <div class="panel-body">
+                    <li>
+                        <a href="../dashboard.html">
+                            <i class="entypo-gauge"></i>
 
-  <div id="mensaje">
-   
-
+                            <span>Dashboard</span>
+                        </a>
 
 
- </div>
+                    </li>
+                    <li class="active">
+                        <a href="carreras.html">
+                            <i class="entypo-flag"></i>
+
+                            <span>Carreras</span>
+                        </a>
+
+                    </li>
 
 
-   <div class="input-group">
-  <span class="input-group-addon">Codigo:</span>
-  <input type="text" id="codigo" class="form-control">
+                    <li id="estudiantes">
+
+                        <a href="../estudiantes/estudiantes.html">
+
+                            <i class="entypo-book-open"></i>
+
+                            <span>Estudiantes</span>
 
 
-  </div>
+                        </a>
 
-<br>
+                    </li>
+                    <li id="usuarios">
 
-	<div class="input-group">
-  	<span class="input-group-addon">Nombre:</span>
- 	 <input type="text" id="nombre" class="form-control">
-</div>
-
-<br>
-
-<div class="btn-group btn-group-justified">
-  <div class="btn-group">
-    <button type="button" id="btn-agregar" class="btn btn-success">Agregar</button>
-  </div>
-  </div>
-</div>
-
-</div>
+                        <a href="../usuarios/usuarios.html">
 
 
-<script type="text/javascript">
+                            <i class="entypo-user"></i>
 
-agregarCarrera();
+                            <span>Usuarios</span>
+                        </a>
 
-</script>
+                    </li>
+
+                    <li id="usuarios">
+
+                        <a href="../login.html">
 
 
+                            <i class="entypo-logout"></i>
+
+                            <span>Cerrar sesión</span>
+                        </a>
+
+                    </li>
+
+
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="panel panel-warning">
+        <div class="panel-heading">Agregar carreras</div>
+        <div class="panel-body">
+
+            <div id="mensaje">
+
+
+
+
+            </div>
+
+
+            <div class="input-group">
+                <span class="input-group-addon">Codigo:</span>
+                <input type="text" id="codigo" class="form-control">
+
+
+            </div>
+
+            <br>
+
+            <div class="input-group">
+                <span class="input-group-addon">Nombre:</span>
+                <input type="text" id="nombre" class="form-control">
+            </div>
+
+            <br>
+
+            <div class="btn-group btn-group-justified">
+                <div class="btn-group">
+                    <button type="button" id="btn-agregar" class="btn btn-success">Agregar</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script type="text/javascript">
+    agregarCarrera();
+    </script>
 
 </body>
+
 </html>

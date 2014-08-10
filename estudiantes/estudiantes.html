@@ -1,150 +1,148 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 
-	<meta charset="UTF-8">
+    <meta charset="UTF-8">
 
-	<title>Estudiantes - Universidad Tecnica Nacional</title>
-
-
-
-	 <link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap-theme.css">
- 	 <link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.css">'
-     <link rel="stylesheet" href="../css/styles.css">
-     <link rel="stylesheet" href="../fonts/css/entypo.css">
-     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic">
+    <title>Estudiantes - Universidad Tecnica Nacional</title>
 
 
-     <script src="../js/jquery.min.js"></script>
-	 <script src="../js/bootstrap.min.js"></script>
-	  <script src="../js/estudiantes.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap-theme.css">
+    <link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.css">'
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../fonts/css/entypo.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic">
+
+
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/estudiantes.js"></script>
 
 
 </head>
 
 <body>
 
- <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
 
-        <a class="navbar-brand" style="color:#fff;" href="#">Univesidad Tecnica Nacioal</a>
-
-
-
-      </div>
-      <div class="navbar-collapse collapse">
-        <ul class="nav navbar-nav navbar-right">
-
-          <li>
-            <a href="../dashboard.html">
-              <i class="entypo-gauge"></i>
-
-              <span>Dashboard</span> 
-            </a>
-
-
-          </li>
-          <li id="carreras">
-            <a href="../carreras/carreras.html">
-             <i class="entypo-flag"></i>
-
-             <span>Carreras</span>
-           </a>
-
-         </li>
-
-
-         <li class="active">
-
-          <a href="estudiantes.html">
-
-            <i class="entypo-book-open"></i>
-
-            <span>Estudiantes</span>
-
-
-          </a>
-
-        </li>
-        <li id="usuarios" >
-
-          <a href="../usuarios/usuarios.html">
-
-
-           <i class="entypo-user"></i>
-
-           <span>Usuarios</span>
-         </a>
-
-       </li>
-
-       <li id="usuarios" >
-
-        <a href="../login.html">
-
-
-         <i class="entypo-logout"></i>
-
-         <span>Cerrar sesión</span>
-       </a>
-
-     </li>
+                <a class="navbar-brand" style="color:#fff;" href="#">Univesidad Tecnica Nacioal</a>
 
 
 
-   </ul>
- </div>
-</div>
-</div>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
 
-<div class="panel panel-warning">
-  <div class="panel-heading">Estudiantes</div>
-  
-  <div class="panel-body">
+                    <li>
+                        <a href="../dashboard.html">
+                            <i class="entypo-gauge"></i>
 
-<div class="btn-group">
-  <a type="button" href="agregar.html" class="btn btn-success">
-    
- <span class="glyphicon glyphicon-plus"></span> Agregar
-
-  </a>
-
-</div>
-
-  <div id="mensaje">
-   
+                            <span>Dashboard</span>
+                        </a>
 
 
+                    </li>
+                    <li id="carreras">
+                        <a href="../carreras/carreras.html">
+                            <i class="entypo-flag"></i>
 
- </div>
+                            <span>Carreras</span>
+                        </a>
 
-   
-		<table class="table" id="table-estudiantes" cellspacing="0" width="100%"  >
-
-
-
-		</table>
-
-
-</div>
-
-</div>	
+                    </li>
 
 
-<script type="text/javascript">
+                    <li class="active">
 
-cargarEstudiantes();
-eliminarEstudiantes();
+                        <a href="estudiantes.html">
+
+                            <i class="entypo-book-open"></i>
+
+                            <span>Estudiantes</span>
 
 
-</script>
+                        </a>
+
+                    </li>
+                    <li id="usuarios">
+
+                        <a href="../usuarios/usuarios.html">
+
+
+                            <i class="entypo-user"></i>
+
+                            <span>Usuarios</span>
+                        </a>
+
+                    </li>
+
+                    <li id="usuarios">
+
+                        <a href="../login.html">
+
+
+                            <i class="entypo-logout"></i>
+
+                            <span>Cerrar sesión</span>
+                        </a>
+
+                    </li>
+
+
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="panel panel-warning">
+        <div class="panel-heading">Estudiantes</div>
+
+        <div class="panel-body">
+
+            <div class="btn-group">
+                <a type="button" href="agregar.html" class="btn btn-success">
+
+                    <span class="glyphicon glyphicon-plus"></span>Agregar
+
+                </a>
+
+            </div>
+
+            <div id="mensaje">
+
+
+
+
+            </div>
+
+
+            <table class="table" id="table-estudiantes" cellspacing="0" width="100%">
+
+
+
+            </table>
+
+
+        </div>
+
+    </div>
+
+
+    <script type="text/javascript">
+    cargarEstudiantes();
+    eliminarEstudiantes();
+    </script>
 
 
 

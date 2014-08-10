@@ -1,205 +1,219 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 
-	<meta charset="UTF-8">
+    <meta charset="UTF-8">
 
-	<title>Estudiantes - Universidad Tecnica Nacional</title>
-
-
-	 <link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap-theme.css">
- 	 <link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.css">'
-     <link rel="stylesheet" href="../css/styles.css">
-      <link rel="stylesheet" href="../css/jasny-bootstrap.css">
-     <link rel="stylesheet" href="../fonts/css/entypo.css">
-     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic">
+    <title>Estudiantes - Universidad Tecnica Nacional</title>
 
 
+    <link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap-theme.css">
+    <link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.css">'
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/jasny-bootstrap.css">
+    <link rel="stylesheet" href="../fonts/css/entypo.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic">
 
 
-     <script src="../js/jquery.min.js"></script>
-      <script src="../js/jasny-bootstrap.min.js"></script>
-	 <script src="../js/bootstrap.min.js"></script>
-	  <script src="../js/estudiantes.js"></script>
-	
+
+
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jasny-bootstrap.js"></script>
+    <script src="../js/estudiantes.js"></script>
+
 
 </head>
+
 <body>
 
 
- <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
 
-        <a class="navbar-brand" style="color:#fff;" href="#">Univesidad Tecnica Nacioal</a>
-
-
-
-      </div>
-      <div class="navbar-collapse collapse">
-        <ul class="nav navbar-nav navbar-right">
-
-          <li>
-            <a href="../dashboard.html">
-              <i class="entypo-gauge"></i>
-
-              <span>Dashboard</span> 
-            </a>
-
-
-          </li>
-          <li id="carreras">
-            <a href="../carreras/carreras.html">
-             <i class="entypo-flag"></i>
-
-             <span>Carreras</span>
-           </a>
-
-         </li>
-
-
-         <li class="active">
-
-          <a href="estudiantes.html">
-
-            <i class="entypo-book-open"></i>
-
-            <span>Estudiantes</span>
-
-
-          </a>
-
-        </li>
-        <li id="usuarios" >
-
-          <a href="../usuarios/usuarios.html">
-
-
-           <i class="entypo-user"></i>
-
-           <span>Usuarios</span>
-         </a>
-
-       </li>
-
-       <li id="usuarios" >
-
-        <a href="../login.html">
-
-
-         <i class="entypo-logout"></i>
-
-         <span>Cerrar sesión</span>
-       </a>
-
-     </li>
+                <a class="navbar-brand" style="color:#fff;" href="#">Univesidad Tecnica Nacioal</a>
 
 
 
-   </ul>
- </div>
-</div>
-</div>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
 
-	<div class="panel panel-warning">
-  <div class="panel-heading">Agregar estudiantes</div>
-  <div class="panel-body">
+                    <li>
+                        <a href="../dashboard.html">
+                            <i class="entypo-gauge"></i>
 
-  <div id="mensaje">
-   
-
+                            <span>Dashboard</span>
+                        </a>
 
 
- </div>
+                    </li>
+                    <li id="carreras">
+                        <a href="../carreras/carreras.html">
+                            <i class="entypo-flag"></i>
 
-   <div class="input-group">
- <div class="fileinput fileinput-new" >
-  <div class="vista-imagen" id="mostrar-imagen" ></div>
-  <div>
-  <span >
-  <span >
-  <input type="file" class="btn btn-primary" id="cargar-imagen">
-  </span>
-  </div>
-</div>
-  </div>
+                            <span>Carreras</span>
+                        </a>
 
-<br>
-
-     <div class="input-group">
-  <span class="input-group-addon">Cedula:</span>
-  <input type="text" id="cedula" class="form-control">
-  </div>
-
-  <br>
+                    </li>
 
 
-   <div class="input-group">
-  <span class="input-group-addon">Nombre:</span>
-  <input type="text" id="nombre" class="form-control">
-  </div>
+                    <li class="active">
 
-<br>
+                        <a href="estudiantes.html">
+
+                            <i class="entypo-book-open"></i>
+
+                            <span>Estudiantes</span>
 
 
- <div class="input-group">
-      <div class="input-group-btn">
-        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Carreras <span class="caret"></span></button>
-        <ul class="dropdown-menu" id="menu_carreras" role="menu">
-          <li><a id="carreras" href="#">Action</a></li>
-          <li><a id="carreras" href="#">Another action</a></li>
-          <li><a id="carreras" href="#">Something else here</a></li>
-        </ul>
-      </div>
-      <input type="text" id="carrera" class="form-control" disabled="true">
+                        </a>
+
+                    </li>
+                    <li id="usuarios">
+
+                        <a href="../usuarios/usuarios.html">
+
+
+                            <i class="entypo-user"></i>
+
+                            <span>Usuarios</span>
+                        </a>
+
+                    </li>
+
+                    <li id="usuarios">
+
+                        <a href="../login.html">
+
+
+                            <i class="entypo-logout"></i>
+
+                            <span>Cerrar sesión</span>
+                        </a>
+
+                    </li>
+
+
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="panel panel-warning">
+        <div class="panel-heading">Agregar estudiantes</div>
+        <div class="panel-body">
+
+            <div id="mensaje">
+
+
+
+
+            </div>
+
+            <div class="input-group">
+                <div class="fileinput fileinput-new">
+                    <div class="vista-imagen" id="mostrar-imagen"></div>
+                    <div>
+                        <span>
+                            <span>
+                                <input type="file" class="btn btn-primary" id="cargar-imagen">
+                            </span>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+
+            <div class="input-group">
+                <span class="input-group-addon">Cedula:</span>
+                <input type="text" id="cedula" data-mask="9-999-999" class="form-control">
+            </div>
+
+            <br>
+
+
+            <div class="input-group">
+                <span class="input-group-addon">Nombre:</span>
+                <input type="text" id="nombre" class="form-control">
+            </div>
+
+            <br>
+
+
+            <div class="input-group">
+                <div class="input-group-btn">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Carreras
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" id="menu_carreras" role="menu">
+                        <li><a id="carreras" href="#">Action</a>
+                        </li>
+                        <li><a id="carreras" href="#">Another action</a>
+                        </li>
+                        <li><a id="carreras" href="#">Something else here</a>
+                        </li>
+                    </ul>
+                </div>
+                <input type="text" id="carrera" class="form-control" disabled="true">
+            </div>
+
+
+            <br>
+
+            <div class="input-group">
+                <div class="input-group-btn">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Nivel de ingles
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">B1</a>
+                        </li>
+                        <li><a href="#">B2</a>
+                        </li>
+                        <li><a href="#">B3</a>
+                        </li>
+                        <li><a href="#">C1</a>
+                        </li>
+                        <li><a href="#">C2</a>
+                        </li>
+                        <li><a href="#">C3</a>
+                        </li>
+                    </ul>
+                </div>
+                <input type="text" id="nivel_ingles" class="form-control" disabled="true">
+            </div>
+
+            <br>
+
+            <div class="btn-group btn-group-justified">
+                <div class="btn-group">
+                    <button type="button" id="btn-agregar" class="btn btn-success">Agregar</button>
+                </div>
+            </div>
+        </div>
+
     </div>
 
 
-  <br>
-
- <div  class="input-group">
-      <div class="input-group-btn">
-        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Nivel de ingles <span class="caret"></span></button>
-        <ul class="dropdown-menu"  role="menu">
-          <li><a  href="#">B1</a></li>
-          <li><a href="#">B2</a></li>
-           <li><a href="#">B3</a></li>
-          <li><a href="#">C1</a></li>
-          <li><a href="#">C2</a></li>
-          <li><a href="#">C3</a></li>
-        </ul>
-      </div>
-      <input type="text" id="nivel_ingles" class="form-control" disabled="true">
-    </div>
-
-    <br>
-
-<div class="btn-group btn-group-justified">
-  <div class="btn-group">
-    <button type="button" id="btn-agregar" class="btn btn-success">Agregar</button>
-  </div>
-  </div>
-</div>
-
-</div>
-
-
-<script type="text/javascript">
-
-agregarEstudiantes();
-cargarCarreras();
-dropdown_Inputs();
-CargarImagen();
-
-</script>
+    <script type="text/javascript">
+    agregarEstudiantes();
+    cargarCarreras();
+    dropdown_Inputs();
+    CargarImagen();
+    </script>
 
 
 
 </body>
+
 </html>
