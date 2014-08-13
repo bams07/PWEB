@@ -9,7 +9,7 @@ a {
 a:hover {
     color: #fff;
 }
-th {
+.panel-warning th {
     font-size: 18px;
     color: #fff;
 }
@@ -61,4 +61,8 @@ th {
 }
 h2 {
     color: #fff;
+}
+.status h3 {
+    font-size: 25px;
+    text-align: center;
 }
