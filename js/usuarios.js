@@ -10,15 +10,15 @@ function agregarUsuarios() {
             {
                 //Variables
 
-                var nombre_usuario = document.getElementById('nombre-usuario').value;
-                var nombre_completo = document.getElementById('nombre-completo').value;
+                var nombre_usuario = document.getElementById('usuario').value;
+                var nombre_completo = document.getElementById('nombre').value;
                 var cedula = document.getElementById('cedula').value;
                 var role = document.getElementById('role-valor').value;
                 var contrasena = document.getElementById('contrasena').value;
 
                 var usuario = {
-                    "nombre_usuario": nombre_usuario,
-                    "nombre_completo": nombre_completo,
+                    "usuario": nombre_usuario,
+                    "nombre": nombre_completo,
                     "cedula": cedula,
                     "role": role,
                     "contrasena": contrasena
@@ -88,14 +88,14 @@ function cargarUsuarios() {
 
             // Imprime los valores en formato html con sus respectivas variables tomadas del JSON
             usuario += "<tr>";
-            usuario += '<td class="lbl-cedula"><a href="vista.html?usuario=' + usuarios[i].nombre_usuario + '">' + usuarios[i].nombre_usuario + '</a></td>';
-            usuario += '<td class="lbl-nombre">' + usuarios[i].nombre_completo + '</td>';
+            usuario += '<td class="lbl-cedula"><a href="vista.html?usuario=' + usuarios[i].usuario + '">' + usuarios[i].usuario + '</a></td>';
+            usuario += '<td class="lbl-nombre">' + usuarios[i].nombre + '</td>';
             usuario += '<td class="lbl-nombre">' + usuarios[i].cedula + '</td>';
             usuario += '<td class="lbl-nombre">' + usuarios[i].role + '</td>';
             usuario += "<td>";
             usuario += '<div class="btn-group">';
             usuario += ' <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown">Opciones<span class="caret"></span></button>';
-            usuario += '<ul class="dropdown-menu" role="menu"><li><a class="editar" id="' + usuarios[i].usuario + '" href="editar.html?usuario=' + usuarios[i].nombre_usuario + '">Editar</a></li><li><a class="eliminar" id="' + usuarios[i].nombre_usuario + '" href="#">Eliminar</a></li></ul>';
+            usuario += '<ul class="dropdown-menu" role="menu"><li><a class="editar" id="' + usuarios[i].usuario + '" href="editar.html?usuario=' + usuarios[i].usuario + '">Editar</a></li><li><a class="eliminar" id="' + usuarios[i].usuario + '" href="#">Eliminar</a></li></ul>';
             usuario += '</div>';
             usuario += "</td>";
             usuario += "</tr>";
@@ -117,7 +117,6 @@ function dropdown_Inputs() {
 
     // Evento que se activa cuando presionamos el TAG <a>
     $("a").click(function() {
-        debugger;
 
         if (this.id == "role") {
 
@@ -135,7 +134,7 @@ function dropdown_Inputs() {
 function cargarUsuario(usuario) {
     //Igual la variable al parametro
 
-    var nombre_usuario = usuario;
+    var usuario = usuario;
 
     // Variable toma los valores del localstorage en formato JSON 
     var usuarios = JSON.parse(localStorage.getItem('usuarios'));
@@ -147,7 +146,7 @@ function cargarUsuario(usuario) {
 
             if (usuarios[i] != undefined) {
 
-                if (usuarios[i].cedula == nombre_usuario) {
+                if (usuarios[i].cedula == usuario) {
 
                     return true;
 
@@ -170,6 +169,8 @@ function eliminarUsuarios() {
     // Evento que se activa cuando presionamo el TAG con el class .eliminar
     $(".eliminar").click(function() {
 
+        debugger;
+
         // Tomamos el id del elemento clikqueado
         var nombre_usuario = $(this).attr("id");
 
@@ -181,7 +182,7 @@ function eliminarUsuarios() {
 
             if (usuarios[i] != undefined) {
 
-                if (usuarios[i].cedula == nombre_usuario) {
+                if (usuarios[i].usuario == nombre_usuario) {
 
                     delete usuarios[i];
 
@@ -209,32 +210,33 @@ function eliminarUsuarios() {
 }
 
 
-function editarEstudiantes() {
+function editarUsuarios() {
     //Variables
-    var cedula_estudiante;
-    var nombre_estudiante;
-    var carrera_estudiante;
-    var nivel_ingles_estudiante;
-    var imagen_estudiante;
+    var cedula;
+    var nombre;
+    var usuario;
+    var role;
+    var contrasena;
 
     //Toma los valores del localstorage
-    var estudiantes = JSON.parse(localStorage.getItem('estudiantes'));
+    var usuarios = JSON.parse(localStorage.getItem('usuarios'));
 
     //Esta variable toma el valor de la cedula enviada por parametro desde el navegador
-    cedula_estudiante = window.location.href.slice(window.location.href.indexOf('=') + 1);
+    usuario = window.location.href.slice(window.location.href.indexOf('=') + 1);
 
     //Ciclo que reccore y busca en base al valor enviado por parametro
-    for (var i = 0; i < estudiantes.length; i++) {
+    for (var i = 0; i < usuarios.length; i++) {
 
-        if (estudiantes[i] != undefined) {
+        if (usuarios[i] != undefined) {
 
 
-            if (estudiantes[i].cedula == cedula_estudiante) {
+            if (usuarios[i].usuario == usuario) {
+
                 // Igualamos los variables a los valores del arreglo
-                nombre_estudiante = estudiantes[i].nombre;
-                carrera_estudiante = estudiantes[i].carrera;
-                nivel_ingles_estudiante = estudiantes[i].nivel_ingles;
-                imagen_estudiante = estudiantes[i].imagen;
+                nombre = usuarios[i].nombre;
+                cedula = usuarios[i].cedula;
+                role = usuarios[i].role;
+                contrasena = usuarios[i].contrasena;
 
             }
 
@@ -245,32 +247,33 @@ function editarEstudiantes() {
 
 
     // Toma los valores y los agrega a los campo en el DOM
-    document.getElementById("cedula").value = cedula_estudiante;
-    document.getElementById("nombre").value = nombre_estudiante;
-    document.getElementById("carrera").value = carrera_estudiante;
-    document.getElementById("nivel_ingles").value = nivel_ingles_estudiante;
-    document.getElementById("mostrar-imagen").innerHTML = '<img src="' + imagen_estudiante + '" id="imagen" width="200px" height="150px">';
+    document.getElementById("cedula").value = cedula;
+    document.getElementById("nombre").value = nombre;
+    document.getElementById("usuario").value = usuario;
+    document.getElementById("role-valor").value = role;
+    document.getElementById("contrasena").value = contrasena;
 
 
     // Este evento se activa cuando presionamos el TAG con el id 
     $("#btn-editar").click(function()
 
         {
+            debugger;
 
             //Ciclo que reccore los valores tomados del localstorage
-            for (var i = 0; i < estudiantes.length; i++) {
+            for (var i = 0; i < usuarios.length; i++) {
 
-                if (estudiantes[i] != undefined) {
+                if (usuarios[i] != undefined) {
 
 
-                    if (estudiantes[i].cedula == cedula_estudiante) {
+                    if (usuarios[i].usuario == usuario) {
 
                         // Editamos los valores con los domados de los campos del DOM
-                        estudiantes[i].cedula = document.getElementById("cedula").value;
-                        estudiantes[i].nombre = document.getElementById("nombre").value;
-                        estudiantes[i].carrera = document.getElementById("carrera").value;
-                        estudiantes[i].nivel_ingles = document.getElementById("nivel_ingles").value;
-                        estudiantes[i].imagen = document.getElementById('imagen').src;
+                        usuarios[i].cedula = document.getElementById("cedula").value;
+                        usuarios[i].nombre = document.getElementById("nombre").value;
+                        usuarios[i].usuario = document.getElementById("usuario").value;
+                        usuarios[i].role = document.getElementById("role-valor").value;
+                        usuarios[i].contrasena = document.getElementById('contrasena').value;
 
 
                     }
@@ -281,25 +284,24 @@ function editarEstudiantes() {
             };
 
             //Enviamos los datos al localstorage ya actualizados
-            localStorage.setItem('estudiantes', JSON.stringify(estudiantes));
-
+            localStorage.setItem('usuarios', JSON.stringify(usuarios));
             // Imprimos el menssaje de resultado
             var contador = 3;
 
-            document.getElementById("mensaje").innerHTML = '<div class="alert alert-info" role="alert"><button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>Estudiante editado con exito! - Seras redireccionado en ' + contador + '</div>';
+            document.getElementById("mensaje").innerHTML = '<div class="alert alert-info" role="alert"><button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>Usuario editado con exito! - Seras redireccionado en ' + contador + '</div>';
 
 
             var tiempo = setInterval(function() {
 
                 contador--;
 
-                document.getElementById("mensaje").innerHTML = '<div class="alert alert-info" role="alert"><button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>Estudiante editado con exito! - Seras redireccionado en ' + contador + '</div>';
+                document.getElementById("mensaje").innerHTML = '<div class="alert alert-info" role="alert"><button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>Usuario editado con exito! - Seras redireccionado en ' + contador + '</div>';
 
                 if (contador == 1) {
 
                     clearInterval(tiempo);
 
-                    window.location.href = 'estudiantes.html';
+                    window.location.href = 'usuarios.html';
                 }
 
             }, 1000);
@@ -311,31 +313,34 @@ function editarEstudiantes() {
 }
 
 
-function vistaEstudiantes() {
+function vistaUsuarios() {
 
-    // Variables
-    var cedula_estudiante;
-    var nombre_estudiante;
-    var carrera_estudiante;
-    var nivel_ingles_estudiante;
-    var imagen_estudiante;
-    var estudiantes = JSON.parse(localStorage.getItem('estudiantes'));
+    //Variables
+    var cedula;
+    var nombre;
+    var usuario;
+    var role;
+    var contrasena;
+
+    //Toma los valores del localstorage
+    var usuarios = JSON.parse(localStorage.getItem('usuarios'));
 
     //Esta variable toma el valor de la cedula enviada por parametro desde el navegador
-    cedula_estudiante = window.location.href.slice(window.location.href.indexOf('=') + 1);
+    usuario = window.location.href.slice(window.location.href.indexOf('=') + 1);
 
-    // Ciclo que recorre los valores
-    for (var i = 0; i < estudiantes.length; i++) {
+    //Ciclo que reccore y busca en base al valor enviado por parametro
+    for (var i = 0; i < usuarios.length; i++) {
 
-        if (estudiantes[i] != undefined) {
+        if (usuarios[i] != undefined) {
 
 
-            if (estudiantes[i].cedula == cedula_estudiante) {
+            if (usuarios[i].usuario == usuario) {
+
                 // Igualamos los variables a los valores del arreglo
-                nombre_estudiante = estudiantes[i].nombre;
-                carrera_estudiante = estudiantes[i].carrera;
-                nivel_ingles_estudiante = estudiantes[i].nivel_ingles;
-                imagen_estudiante = estudiantes[i].imagen;
+                nombre = usuarios[i].nombre;
+                cedula = usuarios[i].cedula;
+                role = usuarios[i].role;
+                contrasena = usuarios[i].contrasena;
 
             }
 
@@ -344,14 +349,12 @@ function vistaEstudiantes() {
 
     };
 
-    // Agregamos los valores de las variables a los campos del DOM
-    document.getElementById("cedula").value = cedula_estudiante;
-    document.getElementById("nombre").value = nombre_estudiante;
-    document.getElementById("carrera").value = carrera_estudiante;
-    document.getElementById("nivel_ingles").value = nivel_ingles_estudiante;
-    document.getElementById("mostrar-imagen").innerHTML = '<img src="' + imagen_estudiante + '" width="200px" height="150px">';
-    document.getElementById("encabezado-pagina").innerHTML = "Estudiante - " + nombre_estudiante;
-
+    // Toma los valores y los agrega a los campo en el DOM
+    document.getElementById("cedula").value = cedula;
+    document.getElementById("nombre").value = nombre;
+    document.getElementById("usuario").value = usuario;
+    document.getElementById("role-valor").value = role;
+    document.getElementById("contrasena").value = contrasena;
 
 
 }
@@ -361,15 +364,15 @@ function ValidarUsuarios() {
     //Variables
 
 
-    var nombre_usuario = document.getElementById('nombre-usuario').value;
-    var nombre_completo = document.getElementById('nombre-completo').value;
+    var usuario = document.getElementById('usuario').value;
+    var nombre = document.getElementById('nombre').value;
     var cedula = document.getElementById('cedula').value;
     var role = document.getElementById('role-valor').value;
     var contrasena = document.getElementById('contrasena').value;
 
 
     // Compara los valores si estan vacios
-    if (nombre_usuario == "" || nombre_completo == "" || cedula == "" || role == "" || contrasena == "") {
+    if (usuario == "" || nombre == "" || cedula == "" || role == "" || contrasena == "") {
 
         // Imprime la ventana de camnpos obligatorios
 
@@ -379,7 +382,7 @@ function ValidarUsuarios() {
 
     } else {
         //Buscar el estudiante si ya ha sido registrado con esa cedula
-        if (cargarUsuario(nombre_usuario) == true) {
+        if (cargarUsuario(usuario) == true) {
 
             // Imprimer el mensaje de estudiante ya registrado
             document.getElementById("mensaje").innerHTML = '<div class="alert alert-danger" role="alert"><button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>Este usuario ya ha sido registrado</div>';

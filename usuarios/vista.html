@@ -5,7 +5,7 @@
 
     <meta charset="UTF-8">
 
-    <title>Estudiantes - Universidad Tecnica Nacional</title>
+    <title>Usuarios - Universidad Tecnica Nacional</title>
 
 
     <link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap-theme.css">
@@ -19,7 +19,7 @@
 
     <script src="../js/jquery.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
-    <script src="../js/estudiantes.js"></script>
+    <script src="../js/usuarios.js"></script>
 
     </script>
 
@@ -65,9 +65,9 @@
                     </li>
 
 
-                    <li class="active">
+                    <li>
 
-                        <a href="estudiantes.html">
+                        <a href="../estudiantes/estudiantes.html">
 
                             <i class="entypo-book-open"></i>
 
@@ -77,9 +77,9 @@
                         </a>
 
                     </li>
-                    <li id="usuarios">
+                    <li class="active">
 
-                        <a href="../usuarios/usuarios.html">
+                        <a href="usuarios.html">
 
 
                             <i class="entypo-user"></i>
@@ -109,7 +109,7 @@
     </div>
 
     <div class="panel panel-warning">
-        <div class="panel-heading" id="encabezado-pagina"></div>
+        <div class="panel-heading">Vista usuarios</div>
         <div class="panel-body">
 
             <div id="mensaje">
@@ -120,51 +120,47 @@
             </div>
 
 
-              <div class="input-group">
-                <div class="fileinput fileinput-new">
-                    <div class="vista-imagen" id="mostrar-imagen"></div>
-
-                </div>
-            </div>
-
-
-
-            <br>
-
             <div class="input-group">
-                <span class="input-group-addon">Cedula:</span>
-                <input type="text" id="cedula" class="form-control" disabled="true">
+                <span class="input-group-addon">Nombre usuario:</span>
+                <input type="text" id="usuario" class="form-control" disabled="true">
             </div>
 
             <br>
 
 
             <div class="input-group">
-                <span class="input-group-addon">Nombre:</span>
+                <span class="input-group-addon">Nombre completo:</span>
                 <input type="text" id="nombre" class="form-control" disabled="true">
             </div>
 
             <br>
 
+            <div class="input-group">
+                <span class="input-group-addon">Cedula:</span>
+                <input type="text" id="cedula" data-mask="9-999-999" class="form-control" disabled="true">
+            </div>
+
+            <br>
 
             <div class="input-group">
-                <span class="input-group-addon">Carreras:</span>
-                <input type="text" id="carrera" class="form-control" disabled="true">
+                <span class="input-group-addon">Role:</span>
+                <input type="text" id="role-valor" class="form-control" disabled="true">
             </div>
 
 
             <br>
 
             <div class="input-group">
-                <span class="input-group-addon">Nivel ingles:</span>
-                <input type="text" id="nivel_ingles" class="form-control" disabled="true">
+                <span class="input-group-addon">Contraseña:</span>
+                <input type="text" id="contrasena" class="form-control" disabled="true">
             </div>
+
 
             <br>
 
             <div class="btn-group btn-group-justified">
                 <div class="btn-group">
-                    <a type="button" href="estudiantes.html" href="" class="btn btn-success">Volver a estudiantes</a>
+                    <a type="button" href="usuarios.html" href="" class="btn btn-success">Volver a usuarios</a>
                 </div>
             </div>
         </div>
@@ -173,7 +169,7 @@
 
 
     <script type="text/javascript">
-    vistaEstudiantes();
+    vistaUsuarios();
     </script>
 
 

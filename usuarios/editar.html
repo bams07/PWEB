@@ -5,7 +5,7 @@
 
     <meta charset="UTF-8">
 
-    <title>Estudiantes - Universidad Tecnica Nacional</title>
+    <title>Usuarios - Universidad Tecnica Nacional</title>
 
 
     <link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap-theme.css">
@@ -19,8 +19,8 @@
 
     <script src="../js/jquery.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
-    <script src="../js/estudiantes.js"></script>
-    </script>
+    <script src="../js/jasny-bootstrap.js"></script>
+    <script src="../js/usuarios.js"></script>
 
 </head>
 
@@ -64,9 +64,9 @@
                     </li>
 
 
-                    <li class="active">
+                    <li>
 
-                        <a href="estudiantes.html">
+                        <a href="../estudiantes/estudiantes.html">
 
                             <i class="entypo-book-open"></i>
 
@@ -76,9 +76,9 @@
                         </a>
 
                     </li>
-                    <li id="usuarios">
+                    <li class="active">
 
-                        <a href="../usuarios/usuarios.html">
+                        <a href="usuarios.html">
 
 
                             <i class="entypo-user"></i>
@@ -108,7 +108,7 @@
     </div>
 
     <div class="panel panel-warning">
-        <div class="panel-heading">Editar estudiantes</div>
+        <div class="panel-heading">Editar usuarios</div>
         <div class="panel-body">
 
             <div id="mensaje">
@@ -120,73 +120,50 @@
 
 
             <div class="input-group">
-                <div class="fileinput fileinput-new">
-                    <div class="vista-imagen" id="mostrar-imagen"></div>
-                    <div>
-                        <span>
-                            <span>
-                                <input type="file" class="btn btn-primary" id="cargar-imagen">
-                            </span>
-                    </div>
-                </div>
-            </div>
-
-
-            <br>
-
-            <div class="input-group">
-                <span class="input-group-addon">Cedula:</span>
-                <input type="text" id="cedula" class="form-control" disabled="true">
+                <span class="input-group-addon">Nombre usuario:</span>
+                <input type="text" id="usuario" class="form-control" disabled="true">
             </div>
 
             <br>
 
 
             <div class="input-group">
-                <span class="input-group-addon">Nombre:</span>
+                <span class="input-group-addon">Nombre completo:</span>
                 <input type="text" id="nombre" class="form-control">
             </div>
 
             <br>
 
+            <div class="input-group">
+                <span class="input-group-addon">Cedula:</span>
+                <input type="text" id="cedula" data-mask="9-999-999" class="form-control">
+            </div>
+
+            <br>
 
             <div class="input-group">
                 <div class="input-group-btn">
-                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Carreras
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Role
                         <span class="caret"></span>
                     </button>
-                    <ul class="dropdown-menu" id="menu_carreras" role="menu">
-
+                    <ul class="dropdown-menu" id="role" role="menu">
+                        <li><a id="role" href="#">Administrador</a>
+                        </li>
+                        <li><a id="role" href="#">Director de carrera</a>
+                        </li>
                     </ul>
                 </div>
-                <input type="text" id="carrera" class="form-control" disabled="true">
+                <input type="text" id="role-valor" class="form-control" disabled="true">
             </div>
 
 
             <br>
 
             <div class="input-group">
-                <div class="input-group-btn">
-                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Nivel de ingles
-                        <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu" role="menu">
-                        <li><a href="#">B1</a>
-                        </li>
-                        <li><a href="#">B2</a>
-                        </li>
-                        <li><a href="#">B3</a>
-                        </li>
-                        <li><a href="#">C1</a>
-                        </li>
-                        <li><a href="#">C2</a>
-                        </li>
-                        <li><a href="#">C3</a>
-                        </li>
-                    </ul>
-                </div>
-                <input type="text" id="nivel_ingles" class="form-control" disabled="true">
+                <span class="input-group-addon">Contraseña:</span>
+                <input type="password" id="contrasena" class="form-control">
             </div>
+
 
             <br>
 
@@ -201,10 +178,8 @@
 
 
     <script type="text/javascript">
-    editarEstudiantes();
-    cargarCarreras();
+    editarUsuarios();
     dropdown_Inputs();
-    CargarImagen();
     </script>
 
 </body>

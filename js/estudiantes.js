@@ -73,7 +73,7 @@ function dropdown_Inputs() {
     // Evento que se activa cuando presionamos el TAG <a>
     $("a").click(function() {
 
-debugger;
+        debugger;
 
         if (this.id == "carreras") {
 
@@ -233,23 +233,30 @@ function CargarEstudiante(cedula) {
 
 function cargarCarreras() {
 
-
+    debugger;
     // Variable toma los valores del localstorage en formato JSON 
     var carreras = JSON.parse(localStorage.getItem('carreras'));
     var carrera = "";
 
-    // Ciclo que recorre las carreras
-    for (var i = 0; i < carreras.length; i++) {
+    if (carreras != null) {
 
-        if (carreras[i] != undefined) {
+        // Ciclo que recorre las carreras
+        for (var i = 0; i < carreras.length; i++) {
 
-            // Imprime los valores en formato html con sus respectivas variables tomadas del JSON
-            carrera += '<li><a id="carreras" name="' + carreras[i].codigo + '" href="#">Codigo: ' + carreras[i].codigo + ' - Nombre: ' + carreras[i].nombre + '</a></li>'
+            if (carreras[i] != undefined) {
 
-        }
+                // Imprime los valores en formato html con sus respectivas variables tomadas del JSON
+                carrera += '<li><a id="carreras" name="' + carreras[i].codigo + '" href="#">Codigo: ' + carreras[i].codigo + ' - Nombre: ' + carreras[i].nombre + '</a></li>'
 
-    };
+            }
 
+        };
+
+    } else {
+
+        // Imprimos el menssaje de resultado
+        document.getElementById("mensaje").innerHTML = '<div class="alert alert-danger" role="alert"><button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>No hay carreras disponibles!</div>';
+    }
 
     // Agrega los valores al DOM
     document.getElementById('menu_carreras').innerHTML = carrera;
